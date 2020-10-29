@@ -122,6 +122,8 @@ function areaOfCircle(radius){
 
     console.log(`The area for a circle with a radius of 2 is ${area}`);
 
+    return area;
+
     
 }
 
@@ -140,7 +142,9 @@ function runAll(num){
     let half    = halfOf(num);
     let squared = Math.pow(half, 2); //16
     let area    = Math.PI *squared *squared; //
-    let result  = percentOf(squared, area);
+    let percent  = percentOf(squared, area);
+    
+    console.log(`The area of a circle with the radius of ${squared} is ${area}`);
 
 }
 runAll(8);
