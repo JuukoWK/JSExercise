@@ -82,6 +82,7 @@ let square = Math.pow(a, 2);
 
 squareNumber(3);
 
+
 // EXERCISE 2
 // Write a function named halfNumber that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of 5 is 2.5.".
 
@@ -148,3 +149,39 @@ function runAll(num){
 
 }
 runAll(8);
+
+/* Document Output
+In HTML, create an <ol>
+Within the ordered-list, add 10 <li>
+Give each list-item a unique id (ex1, ex2, etc, for example)
+Instead of outputting to the console, put the string output from the previous 10 exercises to the document, with each string of output going into its own list item. (There are a few ways to write this solution, consideration given to methods that are more efficient - as long as they're still readable and logical)*/
+
+let fTell = document.getElementById('FortuneTeller');
+fTell.innerHTML = `You will be a ${jobTitle} in ${geographicLocation}, making ${annualSalary} for ${companyName}`;
+
+let aCal = document.getElementById('AgeCalculator');
+aCal.innerHTML = `They are ${currentYear - birthYear} years old.`;
+
+let lCal = document.getElementById('LifetimeSupplyCalculator');
+lCal.innerHTML = `You will need ${totalNeeded} to last you until the ripe old age of ${maximumAge}`;
+
+let tGeo = document.getElementById('TheGeometrizer');
+tGeo.innerHTML = `The circumference is ${circumference} & The area is ${area}`;
+
+let tCon = document.getElementById('TemperatureConverter');
+tCon.innerHTML = `20°C is ${celsiusToF}°F & 75°F is ${fahrenToC}°C`;
+
+let jEx1 = document.getElementById('JSExercise');
+jEx1.innerHTML = `The result of squaring the number ${a} is ${square}`;
+
+let eX2 = document.getElementById('JSExercise2');
+eX2.innerHTML = `Half of ${num} is  ${half}`;
+
+let eX3 = document.getElementById('JSExercise3');
+eX3.innerHTML = `${number1} is ${percent} % of ${number2}`;
+
+let eX4 = document.getElementById('JSExercise4');
+eX4.innerHTML = `The area for a circle with a radius of 2 is ${area}`;
+
+let eX5 = document.getElementById('JSExercise5');
+eX5.innerHTML = `The area of a circle with the radius of ${squared} is ${area}`;
