@@ -72,11 +72,12 @@ console.log(`75°F is ${fahrenToC}°C`)
 // EXERCISE 1
 // Write a function named squareNumber that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."
 
+
 function squareNumber(a){
 
-let square = Math.pow(a, 2);
+let square = a*a;
 
-    console.log(`The result of squaring the number ${a} is ${square}`);    
+    return `The result of squaring the number ${a} is ${square}`;    
     
 }
 
@@ -87,13 +88,13 @@ squareNumber(3);
 // Write a function named halfNumber that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of 5 is 2.5.".
 
 
-function halfOf(num) {
+function halfOf(numTwo) {
 
-    let half = num / 2;
+let halfTwo = numTwo / 2;
     
-    console.log(`Half of ${num} is  ${half}`);
+     return `Half of ${numTwo} is  ${halfTwo}`;
     
-    return half;
+    
 }
 
 halfOf(5);
@@ -102,13 +103,13 @@ halfOf(5);
 // EXERCISE 3
 // Write a function named percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
 
+
 function percentOf(number1, number2){
     
     let percent = number1 / number2 * 100;
 
-    console.log(`${number1} is ${percent} % of ${number2}`);
+    return`${number1} is ${percent} % of ${number2}`;
 
-    return percent;
 }
 
 percentOf(5, 10);
@@ -117,13 +118,13 @@ percentOf(5, 10);
 // Write a function named areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
 //      Bonus: Round the result so there are only two digits after the decimal.
 
+
 function areaOfCircle(radius){
     
-    let area= Math.PI * radius * radius;
+    let area= Math.PI * (radius * radius);
 
-    console.log(`The area for a circle with a radius of 2 is ${area}`);
+    return`The area for a circle with a radius of 2 is ${area}`;
 
-    return area;
 
     
 }
@@ -140,12 +141,14 @@ areaOfCircle(2);
 
 function runAll(num){
 
-    let half    = halfOf(num);
+    let half    = num / 2;
     let squared = Math.pow(half, 2); //16
-    let area    = Math.PI *squared *squared; //
-    let percent  = percentOf(squared, area);
+    let area    = Math.PI *(squared * squared); //
+    console.log(area);
+    let percent = area / squared * 100;
+
     
-    console.log(`The area of a circle with the radius of ${squared} is ${area}`);
+    return `${area} is ${percent}% of ${squared}`;
 
 }
 runAll(8);
@@ -172,16 +175,17 @@ let tCon = document.getElementById('TemperatureConverter');
 tCon.innerHTML = `20°C is ${celsiusToF}°F & 75°F is ${fahrenToC}°C`;
 
 let jEx1 = document.getElementById('JSExercise');
-jEx1.innerHTML = `The result of squaring the number ${a} is ${square}`;
+jEx1.innerHTML = squareNumber(3);
 
 let eX2 = document.getElementById('JSExercise2');
-eX2.innerHTML = `Half of ${num} is  ${half}`;
+eX2.innerHTML = halfOf(5);
 
 let eX3 = document.getElementById('JSExercise3');
-eX3.innerHTML = `${number1} is ${percent} % of ${number2}`;
+eX3.innerHTML = percentOf(5, 10);
 
 let eX4 = document.getElementById('JSExercise4');
-eX4.innerHTML = `The area for a circle with a radius of 2 is ${area}`;
+eX4.innerHTML = areaOfCircle(2);
+
 
 let eX5 = document.getElementById('JSExercise5');
-eX5.innerHTML = `The area of a circle with the radius of ${squared} is ${area}`;
+eX5.innerHTML = runAll(8);
